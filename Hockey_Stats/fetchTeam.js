@@ -1,11 +1,13 @@
 import axios from 'axios';
 
-var Team = none;
+const Team = document.querySelector(".team-button value");
 
-export function fetchTeams() {
+Team.addEventListener('click', updateTeam);
+
+  export function fetchTeams() {
     return function(dispatch) {
       dispatch({type: fetchTeams})
-  
+    
       axios.get('https://statsapi.web.nhl.com/api/v1/teams/${Team}')
         .then((response) => {
           dispatch({
@@ -20,4 +22,4 @@ export function fetchTeams() {
           })
         })
     }
-  }
+}
