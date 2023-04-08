@@ -6,11 +6,16 @@ const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () =>{
 
-    const APIKey = '';
-    const player = document.querySelector('.search-box input').ariaValueMax;
+    const player = document.querySelector('.search-box input').value;
 
     if (player === '')
         return;
 
-    fetch('')
+    fetch("https://v1.hockey.api-sports.io/teams?id=119", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "v1.hockey.api-sports.io",
+            "x-rapidapi-key": "XxXxXxXxXxXxXxXxXxXxXxXx"
+        }
+    })
 })
