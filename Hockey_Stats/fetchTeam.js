@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+var Team = none;
+
 export function fetchTeams() {
     return function(dispatch) {
       dispatch({type: fetchTeams})
